@@ -1,0 +1,40 @@
+.tracktitle {
+    -fx-font: 15px "Calibri", sans-serif;
+    -fx-font-weight: bold;
+}
+
+.* {
+    -fx-font: 12px "Calibri", sans-serif;
+    -fx-text-fill: black;
+}
+
+.wip-rating-stars {
+    -fx-font: 39px "Gadugi", sans-serif;
+}
+
+.deadlineOver {
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+ }
+
+ .tag {
+ -fx-font-weight: bold;
+ }
+
+ .musicprogressbar {
+ -fx-accent: #80823b;
+ -fx-pref-width: 150;
+ }
+
+ .doneButton {
+    -fx-background-color: #659c75;
+    -fx-font-weight: bold;
+ }
+  .reliveButton {
+    -fx-background-color: #dc143c;
+    -fx-font-weight: bold;
+ }
+
+
+
+
