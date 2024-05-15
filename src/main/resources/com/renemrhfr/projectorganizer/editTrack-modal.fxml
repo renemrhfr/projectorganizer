@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.renemrhfr.projectorganizer.controllers.EditTrackController">
+   <children>
+      <HBox prefHeight="35.0" prefWidth="484.0">
+         <children>
+            <Label prefWidth="80.0" text="Title">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="modalTitleInput" maxWidth="150.0" prefWidth="150.0" promptText="Title goes here">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="80.0" text="UUID">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="modalUUIDInput" disable="true" layoutX="58.0" layoutY="10.0" maxWidth="150.0" prefWidth="150.0" promptText="UUID GOES HERE" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="37.0" prefWidth="484.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="75.0" text="Projects">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="modalProjectLocationInput" maxWidth="150.0" prefHeight="25.0" prefWidth="126.0" promptText="Project-Location...">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="launchProjectsSelectorButton" mnemonicParsing="false" text="...">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="80.0" text="Previews">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="modalPreviewLocationInput" layoutX="58.0" layoutY="10.0" maxWidth="150.0" prefHeight="25.0" prefWidth="114.0" promptText="Preview-Location..." />
+            <Button fx:id="launchPreviewsSelectorButton" mnemonicParsing="false" text="..." />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Separator prefHeight="4.0" prefWidth="482.0" />
+      <HBox prefHeight="185.0" prefWidth="484.0">
+         <children>
+            <VBox prefHeight="196.0" prefWidth="464.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="110.0" text="Versionshistorie" />
+                  <ListView fx:id="modalVersionsListView" prefHeight="127.0" prefWidth="487.0" />
+                  <HBox fx:id="versionButtonHBox" alignment="CENTER" spacing="20.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox fx:id="versionPathHBox">
+                           <children>
+                              <Button fx:id="modalChangeVersionPathButton" disable="true" mnemonicParsing="false" text="Neuen Dateipfad auswählen..." />
+                           </children>
+                        </HBox>
+                        <Button fx:id="modalRemoveVersionButton" disable="true" layoutX="187.0" layoutY="10.0" mnemonicParsing="false" text="Version entfernen" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="10.0" layoutY="102.0" prefHeight="4.0" prefWidth="482.0" />
+      <HBox layoutX="10.0" layoutY="106.0" prefHeight="149.0" prefWidth="484.0">
+         <children>
+            <VBox>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label prefWidth="80.0" text="Sendout for:" />
+                  <Region prefHeight="33.0" prefWidth="92.0" />
+                  <Label text="Version:" />
+               </children>
+            </VBox>
+            <VBox spacing="20.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <children>
+                  <ChoiceBox fx:id="modalContactChoiceBox" prefWidth="150.0" />
+                  <ChoiceBox fx:id="modalVersionChoiceBox" layoutX="10.0" layoutY="10.0" prefWidth="150.0" />
+                  <HBox spacing="30.0">
+                     <children>
+                        <Button fx:id="modalSendoutButton" mnemonicParsing="false" text="Senden" />
+                        <Button fx:id="modalRemoveSendoutButton" alignment="TOP_LEFT" disable="true" mnemonicParsing="false" text="Entfernen" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ListView fx:id="modalSendoutListView" prefHeight="139.0" prefWidth="213.0" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="10.0" layoutY="255.0" prefHeight="4.0" prefWidth="482.0" />
+      <HBox layoutX="10.0" layoutY="239.0" prefHeight="42.0" prefWidth="484.0">
+         <children>
+            <Label prefWidth="80.0" text="Tags">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <VBox spacing="20.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <HBox spacing="20.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <CheckBox fx:id="modalTag01CheckBox" mnemonicParsing="false" text="Tag01" visible="false" />
+                        <CheckBox fx:id="modalTag02CheckBox" mnemonicParsing="false" text="Tag02" visible="false" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <CheckBox fx:id="modalTag03CheckBox" mnemonicParsing="false" text="Tag03" visible="false" />
+                        <CheckBox fx:id="modalTag04CheckBox" mnemonicParsing="false" text="Tag04" visible="false" />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="modalTag05CheckBox" layoutX="232.0" layoutY="10.0" mnemonicParsing="false" text="Tag05" visible="false" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="10.0" layoutY="408.0" prefHeight="4.0" prefWidth="482.0" />
+      <HBox layoutX="10.0" layoutY="392.0" prefHeight="42.0" prefWidth="484.0">
+         <children>
+            <Label prefWidth="80.0" text="Stage">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <ChoiceBox fx:id="modalStageChoiceBox" prefHeight="25.0" prefWidth="226.0" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="10.0" layoutY="434.0" prefHeight="4.0" prefWidth="482.0" />
+      <HBox prefHeight="35.0" prefWidth="484.0" spacing="10.0">
+         <children>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="modalSaveButton" mnemonicParsing="false" text="Save" />
+            <Button fx:id="modalCancelButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Abbrechen" />
+         </children>
+         <padding>
+            <Insets right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</FlowPane>

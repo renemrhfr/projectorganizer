@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.renemrhfr.projectorganizer.controllers.NewVersionModalController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="506.0">
+         <children>
+            <Label fx:id="newVersionModalheadline" alignment="CENTER" prefHeight="17.0" prefWidth="490.0" text="Neue Version mit Drag &amp; Drop reinziehen" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="506.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Trackname" />
+                  <Region prefHeight="51.0" prefWidth="36.0" />
+                  <TextField fx:id="newVersionModalTrackname" promptText="Track name goes here..." disable="true"/>
+               </children>
+            </VBox>
+            <Region prefHeight="51.0" prefWidth="178.0" />
+            <VBox layoutX="15.0" layoutY="20.0">
+               <children>
+                  <Label text="UUID" />
+                  <Region prefHeight="51.0" prefWidth="36.0" />
+                  <TextField fx:id="newVersionModalUUIDTextfield" promptText="UUID" disable="true" />
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="71.0" prefHeight="61.0" prefWidth="506.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Dateipfad" />
+                  <Region prefHeight="51.0" prefWidth="36.0" />
+                  <TextField fx:id="newVersionModallPathTextfield" promptText="Track name goes here..." />
+               </children>
+            </VBox>
+            <Region prefHeight="51.0" prefWidth="178.0" />
+            <VBox layoutX="15.0" layoutY="20.0">
+               <children>
+                  <Label text="Version" />
+                  <Region prefHeight="51.0" prefWidth="36.0" />
+                  <TextField fx:id="newVersionModalVersionTextfield" promptText="Version#"/>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="109.0" prefHeight="43.0" prefWidth="506.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Region prefHeight="33.0" prefWidth="393.0" />
+            <Button fx:id="newVersionModalSaveButton" mnemonicParsing="false" text="Übernehmen" disable="true"/>
+         </children>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </HBox>
+   </children>
+</FlowPane>
