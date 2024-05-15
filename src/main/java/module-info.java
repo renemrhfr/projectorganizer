@@ -1,4 +1,4 @@
-module com.locuzzed.projectorganizer {
+module com.renemrhfr.projectorganizer {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -9,10 +9,10 @@ module com.locuzzed.projectorganizer {
     requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.dashicons;
 
-    opens com.locuzzed.projectorganizer to javafx.fxml;
-    exports com.locuzzed.projectorganizer;
-    exports com.locuzzed.projectorganizer.controllers;
-    opens com.locuzzed.projectorganizer.controllers to javafx.fxml;
-    exports com.locuzzed.projectorganizer.types;
-    opens com.locuzzed.projectorganizer.types to javafx.fxml;
+    opens com.renemrhfr.projectorganizer to javafx.fxml;
+    exports com.renemrhfr.projectorganizer;
+    exports com.renemrhfr.projectorganizer.controllers;
+    opens com.renemrhfr.projectorganizer.controllers to javafx.fxml;
+    exports com.renemrhfr.projectorganizer.types;
+    opens com.renemrhfr.projectorganizer.types to javafx.fxml;
 }
